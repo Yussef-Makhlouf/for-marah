@@ -54,7 +54,7 @@ export default function AudioPlayer({ isPlaying, onToggle }: AudioPlayerProps) {
         ref={audioRef}
         loop
         preload="auto"
-        src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+        src="./song.wav"
       />
       {error && (
         <div className="fixed bottom-20 right-8 z-40 p-2 bg-red-100 text-red-800 text-xs rounded-lg shadow-lg">
