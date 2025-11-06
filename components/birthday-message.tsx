@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 export default function BirthdayMessage() {
   const [displayedText, setDisplayedText] = useState("")
   const [isTypingComplete, setIsTypingComplete] = useState(false)
-  const fullText = `في هذا و في كل عام ستكونين تلك الورده التي لا يضاهي جمالها بساتين فلسطين، و لا يمكن لأي وردة أخرى أن تأتي تقتسم معها هذا الجمال. كم تمنيت ألا تخذلني الجغرافيا وأن أكون بجانبك طوال الوقت، على الأقل في لحظاتك الأكثر تميزاً كتلك التي أكتب لك فيها الآن. لكن اليوم نحن نجوم في سماء بعضنا، أو طيور تحلق بعيداً عن الحواجز والعقبات، لا تمسنا صواريخ الشرق ولا حواجز الغرب... نكون كما نكون أينما نكون. سأظل معك دائماً وأبداً، أتمنى لك عاماً كاسمك مليئاً بالمرح والسعادة. من كل قلبي إليكِ، كل عام وأنتِ بخير، تكبرين وتنضجين، ولا تزالين تلك الوردة التي لا يضاهي جمالها جميع بساتين فلسطين. ❤️ يوسف`
+  const fullText = `في هذا العام و في كل عام ستكونين تلك الورده التي لا يضاهي جمالها بساتين فلسطين، و لا يمكن لأي وردة أخرى أن تأتي تقتسم معها هذا الجمال. كم تمنيت ألا تخذلني الجغرافيا وأن أكون بجانبك طوال الوقت، على الأقل في لحظاتك الأكثر تميزاً كتلك التي أكتب لك فيها الآن. لكن اليوم نحن نجوم في سماء بعضنا، أو طيور تحلق بعيداً عن الحواجز والعقبات، لا تمسنا صواريخ الشرق ولا حواجز الغرب... نكون كما نكون أينما نكون. سأظل معك دائماً وأبداً، أتمنى لك عاماً كإسمك مليئاً بالمرح والسعادة. من كل قلبي إليكِ، كل عام وأنتِ بخير، تكبرين وتنضجين، ولا تزالين تلك الوردة التي لا يضاهي جمالها جميع بساتين فلسطين. ❤️ يوسف`
 
   useEffect(() => {
     let index = 0
@@ -24,20 +24,22 @@ export default function BirthdayMessage() {
   }, [])
 
   return (
-    <section className="relative w-full py-24 px-4" aria-labelledby="birthday-heading">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative w-full py-16 sm:py-20 md:py-24 px-4" aria-labelledby="birthday-heading">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 id="birthday-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[var(--font-elegant)] text-[#4a3c3c] mb-4 text-balance">
+          <h2 id="birthday-heading" className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[var(--font-elegant)] text-[#4a3c3c] mb-4 text-balance px-2">
             To Marah, On Your Birthday
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#d4739f] to-[#c94f6d] mx-auto mb-8" />
-          <p className="text-base sm:text-lg text-[#d4739f] font-semibold font-[var(--font-modern)] px-4">June 16 - The Day The World Became More Beautiful</p>
+          <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-[#d4739f] to-[#c94f6d] mx-auto mb-6 sm:mb-8" />
+          <p className="text-sm sm:text-base md:text-lg text-[#d4739f] font-semibold font-[var(--font-modern)] px-4">
+            June 16 - The Day The World Became More Beautiful
+          </p>
         </motion.div>
 
         <motion.div
@@ -47,16 +49,24 @@ export default function BirthdayMessage() {
           viewport={{ once: true }}
           className="relative"
         >
-            <div className="bg-gradient-to-br from-white via-[#fef5f7] to-white rounded-3xl p-6 sm:p-8 md:p-12 border-2 border-[#f4d4e1] shadow-lg overflow-hidden">
-
+          <div className="bg-gradient-to-br from-white via-[#fef5f7] to-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 border-2 border-[#f4d4e1] shadow-lg overflow-hidden">
             <div className="relative z-10 text-right">
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#4a3c3c] mb-8 text-balance font-arabic-elegant arabic-elegant-spacing" lang="ar" role="article" aria-live="polite" aria-label="Birthday message in Arabic">
+              <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed sm:leading-loose text-[#4a3c3c] mb-6 sm:mb-8 text-balance font-arabic-elegant arabic-elegant-spacing break-words hyphens-auto" 
+                 lang="ar" 
+                 role="article" 
+                 aria-live="polite" 
+                 aria-label="Birthday message in Arabic"
+                 style={{ 
+                   lineHeight: '1.8',
+                   wordSpacing: '0.1em',
+                   letterSpacing: '0.02em'
+                 }}>
                 {displayedText}
               </p>
               <motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{ duration: 0.6, repeat: Number.POSITIVE_INFINITY }}
-                className="text-[#d4739f] text-xl"
+                className="text-[#d4739f] text-lg sm:text-xl"
               >
                 |
               </motion.span>

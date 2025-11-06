@@ -52,22 +52,22 @@ export default function DreamsAndPlaces() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-16 sm:mb-20"
         >
-          <h2 id="dreams-heading" className="text-5xl md:text-7xl font-bold font-[var(--font-elegant)] text-[#4a3c3c] mb-6 text-balance">
+          <h2 id="dreams-heading" className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-[var(--font-elegant)] text-[#4a3c3c] mb-4 sm:mb-6 text-balance px-4">
             Our Dream
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#d4739f] to-[#c94f6d]">
               Adventures
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-[#8b6b7f] max-w-3xl mx-auto mb-8 px-4 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#8b6b7f] max-w-4xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
             Places where we'll meet, explore, and create unforgettable memories as friends
           </p>
-          <div className="w-24 h-2 bg-gradient-to-r from-[#d4739f] to-[#c94f6d] mx-auto rounded-full" />
+          <div className="w-16 sm:w-20 md:w-24 h-1.5 sm:h-2 bg-gradient-to-r from-[#d4739f] to-[#c94f6d] mx-auto rounded-full" />
         </motion.div>
 
         {/* Modern layout with overlapping elements */}
-        <div className="space-y-32">
+        <div className="space-y-20 sm:space-y-24 md:space-y-32">
           {dreamPlaces.map((place, index) => {
             const isEven = index % 2 === 0;
             
@@ -76,8 +76,8 @@ export default function DreamsAndPlaces() {
                 key={place.id}
                 initial={{ 
                   opacity: 0, 
-                  y: 100,
-                  scale: 0.8
+                  y: 80,
+                  scale: 0.9
                 }}
                 whileInView={{ 
                   opacity: 1, 
@@ -93,15 +93,15 @@ export default function DreamsAndPlaces() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center ${
                   isEven ? '' : 'lg:grid-flow-col-dense'
                 }`}>
                   {/* Image Section */}
                   <motion.div
-                    whileHover={{ scale: 1.02, rotateY: isEven ? 5 : -5 }}
+                    whileHover={{ scale: 1.01, rotateY: isEven ? 3 : -3 }}
                     className={`relative ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
                   >
-                    <div className="relative aspect-[5/4] rounded-3xl overflow-hidden shadow-2xl">
+                    <div className="relative aspect-[5/4] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                       <Image
                         src={place.image}
                         alt={`${place.name} - ${place.details}`}
@@ -114,13 +114,13 @@ export default function DreamsAndPlaces() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                       
                       {/* Floating city name */}
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <div className="bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg">
-                          <div className="flex items-center gap-3">
-                            <span className="text-3xl">{place.emoji}</span>
+                      <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl px-4 py-3 sm:px-6 sm:py-4 shadow-lg">
+                          <div className="flex items-center gap-2 sm:gap-3">
+                            <span className="text-2xl sm:text-3xl">{place.emoji}</span>
                             <div>
-                              <h3 className="text-xl font-bold text-gray-800">{place.name}</h3>
-                              <p className="text-sm text-gray-600">{place.details}</p>
+                              <h3 className="text-lg sm:text-xl font-bold text-gray-800">{place.name}</h3>
+                              <p className="text-xs sm:text-sm text-gray-600">{place.details}</p>
                             </div>
                           </div>
                         </div>
@@ -139,32 +139,27 @@ export default function DreamsAndPlaces() {
                   </motion.div>
 
                   {/* Content Section */}
-                  <div className={`space-y-6 ${isEven ? 'lg:order-2 lg:pl-8' : 'lg:order-1 lg:pr-8'}`}>
+                  <div className={`space-y-4 sm:space-y-6 ${isEven ? 'lg:order-2 lg:pl-6 xl:pl-8' : 'lg:order-1 lg:pr-6 xl:pr-8'}`}>
                     <motion.div
-                      whileHover={{ x: isEven ? 10 : -10 }}
-                      className="space-y-4"
+                      whileHover={{ x: isEven ? 5 : -5 }}
+                      className="space-y-3 sm:space-y-4"
                     >
-                      {/* Large emoji */}
-                      {/* <div className="text-8xl md:text-9xl">
-                        {place.emoji}
-                      </div> */}
-                      
                       {/* City name with gradient */}
                       <h3 
-                        className="text-4xl md:text-5xl font-bold font-[var(--font-elegant)] mb-4"
+                        className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold font-[var(--font-elegant)] mb-3 sm:mb-4 px-2 sm:px-0"
                         style={{ color: place.color }}
                       >
                         {place.name}
                       </h3>
                       
                       {/* Description */}
-                      <p className="text-lg md:text-xl text-[#6b5b6f] leading-relaxed">
+                      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#6b5b6f] leading-relaxed px-2 sm:px-0">
                         {place.description}
                       </p>
                       
                       {/* Decorative line with city color */}
                       <div 
-                        className="w-24 h-2 rounded-full"
+                        className="w-16 sm:w-20 md:w-24 h-1.5 sm:h-2 rounded-full mx-2 sm:mx-0"
                         style={{ backgroundColor: place.color }}
                       />
                     </motion.div>
@@ -187,18 +182,18 @@ export default function DreamsAndPlaces() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-32"
+          className="text-center mt-20 sm:mt-24 md:mt-32"
         >
-          <div className="max-w-4xl mx-auto">
-            <p className="text-2xl md:text-3xl text-[#8b6b7f] font-[var(--font-elegant)] italic leading-relaxed px-4">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#8b6b7f] font-[var(--font-elegant)] italic leading-relaxed px-4 sm:px-6">
               "We'll meet under the sun of Jerusalem, walk through the old streets of Nablus, and share laughter and adventures in Cairo - creating memories that will last a lifetime."
             </p>
             
             {/* Decorative elements */}
-            <div className="flex justify-center items-center space-x-6 mt-8">
-              <div className="w-3 h-3 rounded-full bg-[#d4af37]" />
-              <div className="w-3 h-3 rounded-full bg-[#22c55e]" />
-              <div className="w-3 h-3 rounded-full bg-[#f97316]" />
+            <div className="flex justify-center items-center space-x-4 sm:space-x-6 mt-6 sm:mt-8">
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#d4af37]" />
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#22c55e]" />
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#f97316]" />
             </div>
           </div>
         </motion.div>

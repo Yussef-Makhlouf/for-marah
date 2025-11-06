@@ -53,15 +53,15 @@ export default function Hero({ onExplore }: HeroProps) {
       </div>
 
 
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
         >
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6 sm:mb-8">
             <div className="relative">
-              <Heart className="w-16 h-16 text-[#c94f6d] fill-[#c94f6d] drop-shadow-lg" />
+              <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-[#c94f6d] fill-[#c94f6d] drop-shadow-lg" />
             </div>
           </div>
         </motion.div>
@@ -72,35 +72,35 @@ export default function Hero({ onExplore }: HeroProps) {
           transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 80 }}
         >
           <div className="relative">
-            {/* Background text effect */}
-            <div className="absolute inset-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-[var(--font-elegant)] text-[#d4739f]/10 blur-sm transform scale-110">
+            {/* Background text effect - hidden on mobile for performance */}
+            <div className="hidden sm:block absolute inset-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-[var(--font-elegant)] text-[#d4739f]/10 blur-sm transform scale-110">
               To MARAH, from Youssef with Friendship
             </div>
             
-            <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-tight text-balance font-[var(--font-elegant)] text-[#4a3c3c]">
+            <h1 className="relative text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-tight text-balance font-[var(--font-elegant)] text-[#4a3c3c] px-2">
               To{" "}
               <motion.span
-                className="text-[#d4739f] soft-glow inline-block relative"
+                className="text-[#d4739f] soft-glow inline-block relative break-words"
                 animate={{ 
-                  scale: [1, 1.08, 1],
+                  scale: [1, 1.05, 1],
                   textShadow: [
-                    "0 0 20px rgba(212, 115, 159, 0.3)",
-                    "0 0 30px rgba(212, 115, 159, 0.5)",
-                    "0 0 20px rgba(212, 115, 159, 0.3)"
+                    "0 0 15px rgba(212, 115, 159, 0.3)",
+                    "0 0 25px rgba(212, 115, 159, 0.5)",
+                    "0 0 15px rgba(212, 115, 159, 0.3)"
                   ]
                 }}
                 transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
               >
                 MARAH
-                {/* Sparkle effects */}
-                <span className="absolute -top-2 -right-2 text-lg">
+                {/* Sparkle effects - smaller on mobile */}
+                <span className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 text-sm sm:text-lg">
                   ✨
                 </span>
               </motion.span>
               ,
             </h1>
-            <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight text-balance font-[var(--font-elegant)] text-[#4a3c3c]">
-              from Youssef with Friendship 
+            <h1 className="relative text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight text-balance font-[var(--font-elegant)] text-[#4a3c3c] px-2">
+              from Youssef with Friendship{" "}
               <span className="inline-block">
                 🤝
               </span>
@@ -113,10 +113,10 @@ export default function Hero({ onExplore }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <p className="text-base sm:text-lg md:text-xl text-[#8b6b7f] mb-6 max-w-2xl mx-auto leading-relaxed italic px-4">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#8b6b7f] mb-4 sm:mb-6 max-w-3xl mx-auto leading-relaxed italic px-4">
             "True friendship blooms beyond borders"
           </p>
-          <p className="text-sm sm:text-base md:text-lg text-[#a97e96] mb-12 max-w-2xl mx-auto leading-relaxed px-4">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#a97e96] mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             A heartfelt journey celebrating our deep and timeless friendship across continents, shared dreams in sacred lands, and a bond
             that knows no distance.
           </p>
@@ -130,39 +130,39 @@ export default function Hero({ onExplore }: HeroProps) {
         >
           <motion.button
             whileHover={{ 
-              scale: 1.08, 
-              boxShadow: "0 0 40px rgba(201, 79, 109, 0.4)",
+              scale: 1.05, 
+              boxShadow: "0 0 30px rgba(201, 79, 109, 0.4)",
               background: "linear-gradient(45deg, #c94f6d, #d4739f)"
             }}
             whileTap={{ scale: 0.95 }}
             onClick={onExplore}
-            className="relative px-8 sm:px-12 py-4 sm:py-5 rounded-full bg-gradient-to-r from-[#d4739f] to-[#c94f6d] text-white font-bold text-base sm:text-lg shadow-2xl shadow-[#d4739f]/40 border-2 border-white/20 backdrop-blur-sm overflow-hidden group"
+            className="relative px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-full bg-gradient-to-r from-[#d4739f] to-[#c94f6d] text-white font-bold text-sm sm:text-base md:text-lg shadow-2xl shadow-[#d4739f]/40 border-2 border-white/20 backdrop-blur-sm overflow-hidden group"
             aria-label="Explore our friendship journey"
           >
             {/* Button background animation */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#c94f6d] to-[#d4739f] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             
-            {/* Shimmer effect */}
+            {/* Shimmer effect - reduced on mobile */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+              className="hidden sm:block absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
               animate={{ x: ["-100%", "200%"] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
             />
             
-              <span className="relative z-10 flex items-center gap-2">
-                Explore Our Story
-                <span>✨</span>
-              </span>
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              <span className="whitespace-nowrap">Explore Our Story</span>
+              <span className="text-sm sm:text-base">✨</span>
+            </span>
           </motion.button>
           
-          {/* Floating elements around button */}
+          {/* Floating elements around button - smaller on mobile */}
           <motion.div
-            className="absolute -top-2 -left-2 w-4 h-4 bg-[#d4739f]/30 rounded-full blur-sm"
+            className="absolute -top-1 -left-1 sm:-top-2 sm:-left-2 w-2 h-2 sm:w-4 sm:h-4 bg-[#d4739f]/30 rounded-full blur-sm"
             animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0.7, 0.3] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
           <motion.div
-            className="absolute -bottom-2 -right-2 w-3 h-3 bg-[#c94f6d]/40 rounded-full blur-sm"
+            className="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 w-1.5 h-1.5 sm:w-3 sm:h-3 bg-[#c94f6d]/40 rounded-full blur-sm"
             animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.8, 0.4] }}
             transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
           />
