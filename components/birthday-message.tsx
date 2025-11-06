@@ -33,11 +33,11 @@ export default function BirthdayMessage() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 id="birthday-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#4a3c3c] mb-4 text-balance">
+          <h2 id="birthday-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[var(--font-elegant)] text-[#4a3c3c] mb-4 text-balance">
             To Marah, On Your Birthday
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-[#d4739f] to-[#c94f6d] mx-auto mb-8" />
-          <p className="text-base sm:text-lg text-[#d4739f] font-semibold px-4">June 16 - The Day The World Became More Beautiful</p>
+          <p className="text-base sm:text-lg text-[#d4739f] font-semibold font-[var(--font-modern)] px-4">June 16 - The Day The World Became More Beautiful</p>
         </motion.div>
 
         <motion.div
@@ -50,7 +50,7 @@ export default function BirthdayMessage() {
             <div className="bg-gradient-to-br from-white via-[#fef5f7] to-white rounded-3xl p-6 sm:p-8 md:p-12 border-2 border-[#f4d4e1] shadow-lg overflow-hidden">
 
             <div className="relative z-10 text-right">
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#4a3c3c] mb-8 text-balance font-[var(--font-arabic)]" lang="ar" role="article" aria-live="polite" aria-label="Birthday message in Arabic">
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#4a3c3c] mb-8 text-balance font-arabic-elegant arabic-elegant-spacing" lang="ar" role="article" aria-live="polite" aria-label="Birthday message in Arabic">
                 {displayedText}
               </p>
               <motion.span

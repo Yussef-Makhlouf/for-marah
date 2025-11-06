@@ -2,23 +2,12 @@
 
 import { motion } from "framer-motion"
 import { Heart } from "lucide-react"
-import { useState, useEffect } from "react"
 
 interface HeroProps {
   onExplore: () => void
 }
 
 export default function Hero({ onExplore }: HeroProps) {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
 
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-20">
@@ -63,20 +52,6 @@ export default function Hero({ onExplore }: HeroProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-transparent" />
       </div>
 
-      {/* Enhanced cursor follower */}
-      <motion.div
-        className="fixed pointer-events-none z-20"
-        style={{
-          x: mousePosition.x - 10,
-          y: mousePosition.y - 10,
-        }}
-        transition={{ type: "spring", damping: 25, mass: 0.5 }}
-      >
-        <div className="relative">
-          <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#d4739f]/40 to-[#c94f6d]/40 blur-sm" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#d4739f]/60" />
-        </div>
-      </motion.div>
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <motion.div
@@ -85,26 +60,9 @@ export default function Hero({ onExplore }: HeroProps) {
           transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
         >
           <div className="flex justify-center mb-8">
-            <motion.div 
-              className="relative"
-              animate={{ 
-                scale: [1, 1.15, 1],
-                rotate: [0, 5, -5, 0]
-              }} 
-              transition={{ 
-                duration: 4, 
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut"
-              }}
-            >
+            <div className="relative">
               <Heart className="w-16 h-16 text-[#c94f6d] fill-[#c94f6d] drop-shadow-lg" />
-              {/* Pulsing ring around heart */}
-              <motion.div
-                className="absolute inset-0 rounded-full border-2 border-[#d4739f]/30"
-                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </motion.div>
+            </div>
           </div>
         </motion.div>
 
@@ -115,11 +73,11 @@ export default function Hero({ onExplore }: HeroProps) {
         >
           <div className="relative">
             {/* Background text effect */}
-            <div className="absolute inset-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-serif text-[#d4739f]/10 blur-sm transform scale-110">
+            <div className="absolute inset-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-[var(--font-elegant)] text-[#d4739f]/10 blur-sm transform scale-110">
               To MARAH, from Youssef with Friendship
             </div>
             
-            <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-tight text-balance font-serif text-[#4a3c3c]">
+            <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-tight text-balance font-[var(--font-elegant)] text-[#4a3c3c]">
               To{" "}
               <motion.span
                 className="text-[#d4739f] soft-glow inline-block relative"
@@ -135,25 +93,17 @@ export default function Hero({ onExplore }: HeroProps) {
               >
                 MARAH
                 {/* Sparkle effects */}
-                <motion.span
-                  className="absolute -top-2 -right-2 text-lg"
-                  animate={{ rotate: [0, 360], scale: [0.8, 1.2, 0.8] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
+                <span className="absolute -top-2 -right-2 text-lg">
                   ✨
-                </motion.span>
+                </span>
               </motion.span>
               ,
             </h1>
-            <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight text-balance font-serif text-[#4a3c3c]">
+            <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight text-balance font-[var(--font-elegant)] text-[#4a3c3c]">
               from Youssef with Friendship 
-              <motion.span
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                className="inline-block"
-              >
+              <span className="inline-block">
                 🤝
-              </motion.span>
+              </span>
             </h1>
           </div>
         </motion.div>
@@ -199,15 +149,10 @@ export default function Hero({ onExplore }: HeroProps) {
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
             />
             
-            <span className="relative z-10 flex items-center gap-2">
-              Explore Our Story
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                ✨
-              </motion.span>
-            </span>
+              <span className="relative z-10 flex items-center gap-2">
+                Explore Our Story
+                <span>✨</span>
+              </span>
           </motion.button>
           
           {/* Floating elements around button */}
@@ -225,25 +170,14 @@ export default function Hero({ onExplore }: HeroProps) {
       </div>
 
       {/* Enhanced scroll indicator */}
-      <motion.div
-        animate={{ y: [0, 15, 0] }}
-        transition={{ duration: 2.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <motion.div
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2">
+        <div>
           <Heart className="w-8 h-8 text-[#d4739f] fill-[#d4739f]/50" />
-        </motion.div>
-        <motion.div
-          className="text-xs text-[#8b6b7f] font-medium tracking-wider uppercase"
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
+        </div>
+        <div className="text-xs text-[#8b6b7f] font-medium tracking-wider uppercase">
           Scroll Down
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   )
 }

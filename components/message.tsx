@@ -38,21 +38,38 @@ export default function Message() {
           viewport={{ once: true }}
           className="relative"
         >
-          {/* Background text effect */}
-          <div className="absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-[#d4739f]/5 blur-sm transform scale-110">
+          {/* Modern layered text effect */}
+          <div className="absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-[var(--font-elegant)] text-[#d4739f]/8 blur-sm transform scale-105">
             Distance may separate us, but our friendship carries us through every moment, every challenge, every dream we share.
           </div>
           
-          <h2 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance font-serif text-[#4a3c3c] px-4">
-            <span className="inline-block">{displayedText}</span>
+          <h2 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance font-[var(--font-elegant)] px-4">
+            <span className="inline-block text-[#4a3c3c]">{displayedText}</span>
             <motion.span
               animate={{ opacity: [1, 0] }}
               transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY }}
-              className="text-[#d4739f] ml-1"
+              className="text-[#d4739f] ml-1 text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
             >
               |
             </motion.span>
           </h2>
+          
+          {/* Decorative elements */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            viewport={{ once: true }}
+            className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-br from-[#d4739f]/20 to-[#c94f6d]/10 rounded-full blur-xl"
+          />
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            viewport={{ once: true }}
+            className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-tl from-[#f4d4e1]/30 to-transparent rounded-full blur-xl"
+          />
         </motion.div>
 
         {/* Simplified floating elements - reduced for performance */}

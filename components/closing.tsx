@@ -5,86 +5,96 @@ import { motion } from "framer-motion"
 export default function Closing() {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-20">
-      {/* Enhanced background matching the image */}
+      {/* Modern gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#faf8f6] via-[#fef5f7] to-[#f5f3f0]" />
-      <div className="absolute inset-0 opacity-30" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4739f' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-      }} />
       
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-white/20" />
+      {/* Organic floating shapes */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-[#d4739f]/10 to-[#c94f6d]/5 organic-shape-1" />
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-tl from-[#f4d4e1]/20 to-transparent organic-shape-2" />
+      </div>
 
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+        {/* Main message */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, type: "spring", stiffness: 80 }}
+          transition={{ duration: 1, type: "spring", stiffness: 60 }}
           viewport={{ once: true }}
-          className="relative"
+          className="mb-16"
         >
-          {/* Background text effect */}
-          <div className="absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-[#d4739f]/5 blur-sm transform scale-110">
-            No matter where we are, you'll always be my best friend.
-          </div>
-          
-          <h2 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif mb-12 leading-tight text-balance text-[#4a3c3c]">
-            No matter where we are, you'll always be my best friend.
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-[var(--font-elegant)] mb-8 leading-tight text-balance">
+            <span className="text-[#4a3c3c]">No matter where we are,</span>
+            <br />
+            <span className="gradient-text">you'll always be my best friend.</span>
           </h2>
         </motion.div>
 
+        {/* Connection visual */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
           className="mb-16"
         >
-          <p className="text-lg sm:text-xl md:text-2xl text-[#8b6b7f] mb-12 leading-relaxed font-light">
-            True friendship knows no distance, only souls that understand each other.
-          </p>
-          
-          {/* Enhanced Arabic text with heart */}
-          <div className="relative inline-block">
+          <div className="flex items-center justify-center gap-8 mb-12">
+            {/* Yussef side */}
             <motion.div
-              animate={{ scale: [1, 1.02, 1] }}
-              transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-              className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#d4739f] mb-8"
+              whileHover={{ scale: 1.05 }}
+              className="text-center"
             >
-              <span className="inline-block mx-2">YUSSEF</span>
-              <motion.span 
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                className="inline-block mx-4 text-[#c94f6d]"
-              >
-                🤍
-              </motion.span>
-              <span className="inline-block mx-2">MARAH</span>
+              <div className="w-24 h-24 bg-gradient-to-br from-[#d4739f] to-[#c94f6d] rounded-full flex items-center justify-center mb-4 shadow-2xl">
+                <span className="text-3xl text-white font-bold">Y</span>
+              </div>
+              <p className="text-xl font-[var(--font-elegant)] text-[#4a3c3c]">YUSSEF</p>
+            </motion.div>
+
+            {/* Connection line with heart */}
+            <div className="flex-1 flex items-center justify-center relative">
+              <div className="w-full h-1 bg-gradient-to-r from-[#d4739f] via-[#f4d4e1] to-[#c94f6d] rounded-full" />
+              <div className="absolute bg-white rounded-full p-3 shadow-lg">
+                <span className="text-2xl">🤍</span>
+              </div>
+            </div>
+
+            {/* Marah side */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="text-center"
+            >
+              <div className="w-24 h-24 bg-gradient-to-br from-[#c94f6d] to-[#d4739f] rounded-full flex items-center justify-center mb-4 shadow-2xl">
+                <span className="text-3xl text-white font-bold">M</span>
+              </div>
+              <p className="text-xl font-[var(--font-elegant)] text-[#4a3c3c]">MARAH</p>
             </motion.div>
           </div>
+          
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            viewport={{ once: true }}
+            className="text-lg sm:text-xl md:text-2xl text-[#8b6b7f] leading-relaxed font-[var(--font-modern)]"
+          >
+            True friendship knows no distance, only souls that understand each other.
+          </motion.p>
         </motion.div>
 
+        {/* Final message */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 1 }}
           viewport={{ once: true }}
+          className="glass-effect rounded-3xl p-8 modern-shadow"
         >
-          <p className="text-base text-[#a97e96] italic font-light tracking-wide">
+          <p className="text-lg text-[#a97e96] italic font-light tracking-wide font-[var(--font-modern)] mb-4">
             Friends forever, from every corner of the world
           </p>
+          
+     
         </motion.div>
-
-        {/* Simplified decorative elements - reduced for performance */}
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 40, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-          className="absolute -top-32 -right-32 w-64 h-64 border border-[#f4d4e1]/20 rounded-full pointer-events-none"
-        />
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 50, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-          className="absolute -bottom-32 -left-32 w-64 h-64 border border-[#d4739f]/10 rounded-full pointer-events-none"
-        />
       </div>
     </section>
   )

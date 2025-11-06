@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Playfair_Display, Lora, Amiri, Cairo } from "next/font/google"
+import { Geist, Geist_Mono, Playfair_Display, Lora, Amiri, Cairo, Crimson_Text, Inter, Scheherazade_New } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -36,6 +36,24 @@ const cairo = Cairo({
   variable: "--font-arabic-sans",
   display: "swap"
 })
+const crimsonText = Crimson_Text({ 
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-elegant",
+  display: "swap"
+})
+const inter = Inter({ 
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-modern",
+  display: "swap"
+})
+const scheherazadeNew = Scheherazade_New({ 
+  subsets: ["arabic", "latin"],
+  weight: ["400", "700"],
+  variable: "--font-arabic-elegant",
+  display: "swap"
+})
 
 export const metadata: Metadata = {
   title: "To Marah - A Heartfelt Journey | From Youssef with Love",
@@ -67,7 +85,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geist.variable} ${geistMono.variable} ${playfairDisplay.variable} ${lora.variable} ${amiri.variable} ${cairo.variable} font-sans antialiased`}>
+      <body className={`${geist.variable} ${geistMono.variable} ${playfairDisplay.variable} ${lora.variable} ${amiri.variable} ${cairo.variable} ${crimsonText.variable} ${inter.variable} ${scheherazadeNew.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

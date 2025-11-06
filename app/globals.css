@@ -344,3 +344,97 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #c94f6d, #d4739f);
 }
+
+/* Custom Font Styles */
+.font-elegant {
+  font-family: var(--font-elegant);
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+
+.font-modern {
+  font-family: var(--font-modern);
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+
+.font-arabic-elegant {
+  font-family: var(--font-arabic-elegant);
+  font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  direction: rtl;
+}
+
+/* Enhanced text shadows for elegant fonts */
+.text-elegant-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Improved letter spacing for Arabic elegant text */
+.arabic-elegant-spacing {
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+}
+
+/* Modern glassmorphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Advanced gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #d4739f, #c94f6d, #f4d4e1);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Modern shadow effects */
+.modern-shadow {
+  box-shadow: 
+    0 4px 6px -1px rgba(212, 115, 159, 0.1),
+    0 2px 4px -1px rgba(212, 115, 159, 0.06),
+    0 20px 25px -5px rgba(212, 115, 159, 0.1),
+    0 10px 10px -5px rgba(212, 115, 159, 0.04);
+}
+
+/* Organic shapes */
+.organic-shape-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.organic-shape-2 {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+/* Advanced hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(212, 115, 159, 0.25);
+}
+
+/* Responsive typography improvements */
+@media (max-width: 640px) {
+  .mobile-text-balance {
+    text-wrap: balance;
+    line-height: 1.3;
+  }
+}

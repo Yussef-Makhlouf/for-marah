@@ -8,7 +8,7 @@ import BirthdayMessage from "@/components/birthday-message"
 import DreamsAndPlaces from "@/components/dreams-and-places"
 import SharedJoys from "@/components/shared-joys"
 import Message from "@/components/message"
-import Gallery from "@/components/gallery"
+// import Gallery from "@/components/gallery"
 import Closing from "@/components/closing"
 import AudioPlayer from "@/components/audio-player"
 import LoadingScreen from "@/components/loading-screen"
@@ -74,7 +74,7 @@ export default function Home() {
         <DreamsAndPlaces />
         <SharedJoys />
         <Message />
-        <Gallery />
+        {/* <Gallery /> */}
         <Closing />
       </div>
     </main>
