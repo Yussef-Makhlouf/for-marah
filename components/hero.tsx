@@ -116,7 +116,7 @@ export default function Hero({ onExplore }: HeroProps) {
           <div className="relative">
             {/* Background text effect */}
             <div className="absolute inset-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-serif text-[#d4739f]/10 blur-sm transform scale-110">
-              To MARAH, from Youssef with Love
+              To MARAH, from Youssef with Friendship
             </div>
             
             <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-tight text-balance font-serif text-[#4a3c3c]">
@@ -146,13 +146,13 @@ export default function Hero({ onExplore }: HeroProps) {
               ,
             </h1>
             <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight text-balance font-serif text-[#4a3c3c]">
-              from Youssef with Love 
+              from Youssef with Friendship 
               <motion.span
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                 className="inline-block"
               >
-                💌
+                🤝
               </motion.span>
             </h1>
           </div>
@@ -164,10 +164,10 @@ export default function Hero({ onExplore }: HeroProps) {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <p className="text-base sm:text-lg md:text-xl text-[#8b6b7f] mb-6 max-w-2xl mx-auto leading-relaxed italic px-4">
-            "Our love blooms beyond borders"
+            "True friendship blooms beyond borders"
           </p>
           <p className="text-sm sm:text-base md:text-lg text-[#a97e96] mb-12 max-w-2xl mx-auto leading-relaxed px-4">
-            A heartfelt journey celebrating our connection across continents, shared dreams in sacred lands, and a love
+            A heartfelt journey celebrating our deep and timeless friendship across continents, shared dreams in sacred lands, and a bond
             that knows no distance.
           </p>
         </motion.div>
@@ -187,7 +187,7 @@ export default function Hero({ onExplore }: HeroProps) {
             whileTap={{ scale: 0.95 }}
             onClick={onExplore}
             className="relative px-8 sm:px-12 py-4 sm:py-5 rounded-full bg-gradient-to-r from-[#d4739f] to-[#c94f6d] text-white font-bold text-base sm:text-lg shadow-2xl shadow-[#d4739f]/40 border-2 border-white/20 backdrop-blur-sm overflow-hidden group"
-            aria-label="Explore our love story"
+            aria-label="Explore our friendship journey"
           >
             {/* Button background animation */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#c94f6d] to-[#d4739f] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

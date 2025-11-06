@@ -9,8 +9,8 @@ const sharedJoys = [
     title: "Food Adventures",
     emoji: "🍽️",
     description:
-      "Every bite becomes sweeter when shared with you. Street food from bustling markets, homemade meals filled with love, and late-night snacks that taste like comfort.",
-    tooltip: "From Palestinian knafeh to Egyptian koshari, from street food adventures to homemade meals - every flavor is enhanced by your presence. Food becomes a language of love when we're together.",
+      "Every bite becomes better when shared with a friend. Street food from bustling markets, homemade meals, and late-night snacks that taste like comfort and joy.",
+    tooltip: "From Palestinian knafeh to Egyptian koshari, from street food adventures to homemade meals - every flavor is enhanced by good company. Food becomes a language of friendship when we're together.",
     gradient: "from-orange-100 to-amber-100"
   },
   {
@@ -18,8 +18,8 @@ const sharedJoys = [
     title: "Travel & Exploration",
     emoji: "🎡",
     description:
-      "Discovering new cultures, watching sunsets in foreign lands, and creating postcards from our hearts. Every journey is an adventure to cherish together.",
-    tooltip: "Every destination becomes magical when explored together. From ancient ruins to modern cities, from quiet beaches to bustling markets - the world is our playground of memories.",
+      "Discovering new cultures, watching sunsets in foreign lands, and creating unforgettable memories. Every journey is an adventure to cherish as friends.",
+    tooltip: "Every destination becomes magical when explored with a good friend. From ancient ruins to modern cities, from quiet beaches to bustling markets - the world is our playground of memories.",
     gradient: "from-sky-100 to-blue-100"
   },
   {
@@ -27,8 +27,8 @@ const sharedJoys = [
     title: "Our Memory Gallery",
     emoji: "📝",
     description:
-      "Moments frozen in time - from the first hello to dreams yet to unfold. Every photograph holds a piece of our beautiful story.",
-    tooltip: "Each photo captures not just a moment, but an emotion, a laugh, a dream. Our gallery is a treasure chest of memories that grows more precious with time.",
+      "Moments frozen in time - from the first hello to dreams yet to unfold. Every photograph holds a piece of our beautiful friendship.",
+    tooltip: "Each photo captures not just a moment, but an emotion, a laugh, a shared experience. Our gallery is a treasure chest of friendship memories that grows more precious with time.",
     gradient: "from-purple-100 to-pink-100"
   },
 ]

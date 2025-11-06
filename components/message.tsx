@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export default function Message() {
   const [displayedText, setDisplayedText] = useState("")
-  const fullText = "Distance may separate us, but my heart carries you in every moment, every breath, every dream."
+  const fullText = "Distance may separate us, but our friendship carries us through every moment, every challenge, every dream we share."
 
   useEffect(() => {
     let index = 0
@@ -40,7 +40,7 @@ export default function Message() {
         >
           {/* Background text effect */}
           <div className="absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-[#d4739f]/5 blur-sm transform scale-110">
-            Distance may separate us, but my heart carries you in every moment, every breath, every dream.
+            Distance may separate us, but our friendship carries us through every moment, every challenge, every dream we share.
           </div>
           
           <h2 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance font-serif text-[#4a3c3c] px-4">

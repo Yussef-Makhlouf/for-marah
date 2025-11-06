@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Playfair_Display, Lora } from "next/font/google"
+import { Geist, Geist_Mono, Playfair_Display, Lora, Amiri, Cairo } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -22,6 +22,18 @@ const playfairDisplay = Playfair_Display({
 const lora = Lora({ 
   subsets: ["latin"], 
   variable: "--font-serif-body",
+  display: "swap"
+})
+const amiri = Amiri({ 
+  subsets: ["arabic", "latin"],
+  weight: ["400", "700"],
+  variable: "--font-arabic",
+  display: "swap"
+})
+const cairo = Cairo({ 
+  subsets: ["arabic", "latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-arabic-sans",
   display: "swap"
 })
 
@@ -55,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geist.variable} ${geistMono.variable} ${playfairDisplay.variable} ${lora.variable} font-sans antialiased`}>
+      <body className={`${geist.variable} ${geistMono.variable} ${playfairDisplay.variable} ${lora.variable} ${amiri.variable} ${cairo.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

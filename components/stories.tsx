@@ -3,32 +3,32 @@
 import { motion } from "framer-motion"
 import Tooltip from "./tooltip"
 
-const loveStories = [
+const friendshipStories = [
   {
     id: 1,
     title: "When We First Connected",
     description:
-      "The moment our chat began, a digital spark that ignited something timeless. In that first conversation, I knew I was meeting someone extraordinary.",
+      "The moment our chat began, a digital spark that ignited a timeless friendship. In that first conversation, I knew I was meeting someone truly special.",
     icon: "💕",
-    tooltip: "Our first conversation was like finding a missing piece of my soul. Every word we exchanged felt like destiny unfolding, creating an unbreakable bond that transcends time and space.",
+    tooltip: "Our first conversation was like finding a kindred spirit. Every word we exchanged felt natural and genuine, creating an unbreakable bond of friendship that transcends time and space.",
     gradient: "from-blue-100 to-purple-100"
   },
   {
     id: 2,
     title: "Your Birthday - June 16",
     description:
-      "The day that blessed the world with your presence. Every year on this date, my heart celebrates the woman who has become my greatest treasure.",
+      "The day that blessed the world with your presence. Every year on this date, I celebrate the amazing friend who has enriched my life.",
     icon: "🎉",
-    tooltip: "June 16th isn't just your birthday - it's the anniversary of when the universe became more beautiful. This day marks the beginning of all the joy and love you bring to the world.",
+    tooltip: "June 16th isn't just your birthday - it's a celebration of an incredible person and friend. This day marks the beginning of all the joy and positivity you bring to the world.",
     gradient: "from-pink-100 to-rose-100"
   },
   {
     id: 3,
-    title: "Our Dream Journeys",
+    title: "Our Dream Adventures",
     description:
-      "From the ancient streets of Jerusalem to the heart of Nablus, from the vibrant Cairo to wherever love leads us—every destination is beautiful because you'll be there.",
+      "From the ancient streets of Jerusalem to the heart of Nablus, from the vibrant Cairo to wherever our friendship leads us—every destination is special because we'll explore it together.",
     icon: "🌍",
-    tooltip: "Every place we dream of visiting becomes sacred because we'll experience it together. Our love transforms ordinary destinations into extraordinary memories waiting to be made.",
+    tooltip: "Every place we dream of visiting becomes an adventure because we'll experience it as friends. Our friendship transforms ordinary destinations into extraordinary memories waiting to be made.",
     gradient: "from-green-100 to-teal-100"
   },
 ]
@@ -45,13 +45,13 @@ export default function Stories() {
           className="text-center mb-16"
         >
           <h2 id="stories-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#4a3c3c] mb-4 text-balance">
-            Our Journey Together
+            Our Friendship Journey
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-[#d4739f] to-[#c94f6d] mx-auto" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10" role="list">
-          {loveStories.map((story, index) => (
+          {friendshipStories.map((story, index) => (
             <motion.div
               key={story.id}
               initial={{ opacity: 0, y: 30, rotateY: -15 }}

@@ -41,7 +41,7 @@ export default function LoadingScreen({ isLoading }: LoadingScreenProps) {
           transition={{ delay: 0.2 }}
           className="text-2xl md:text-3xl font-serif text-[#4a3c3c] mb-4"
         >
-          Preparing Your Love Story...
+          Preparing Your Friendship Story...
         </motion.h2>
         
         <motion.div

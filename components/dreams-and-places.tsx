@@ -8,27 +8,27 @@ const dreamPlaces = [
     id: 1,
     name: "Jerusalem 🕌",
     description:
-      "Walking through ancient streets where history whispers tales of forever, holding your hand under the golden light.",
+      "Walking through ancient streets where history whispers timeless tales, exploring together under the golden light of this sacred city.",
     details: "The city of peace and sacred moments",
-    tooltip: "In Jerusalem, we'll walk where prophets walked, pray where saints prayed, and love where love becomes eternal. Every stone tells a story, and ours will be written in golden light.",
+    tooltip: "In Jerusalem, we'll walk where prophets walked, pray where saints prayed, and create memories as friends. Every stone tells a story, and our friendship will add another beautiful chapter.",
     gradient: "from-amber-100 to-yellow-100"
   },
   {
     id: 2,
     name: "Nablus 🌾",
     description:
-      "Exploring the heart of Palestine, tasting the spirit of tradition, and creating memories in your homeland with you.",
-    details: "Where roots run deep and love grows stronger",
-    tooltip: "Nablus holds your heritage, your stories, your roots. Together we'll taste the sweetness of knafeh and the richness of tradition, creating new memories on ancient soil.",
+      "Exploring the heart of Palestine, tasting the spirit of tradition, and creating unforgettable memories in your homeland together.",
+    details: "Where roots run deep and friendships grow stronger",
+    tooltip: "Nablus holds your heritage, your stories, your roots. Together we'll taste the sweetness of knafeh and the richness of tradition, creating new friendship memories on ancient soil.",
     gradient: "from-emerald-100 to-green-100"
   },
   {
     id: 3,
     name: "Cairo 🏺",
     description:
-      "Dancing through bustling streets, sharing street food adventures, and laughing under starlit Egyptian skies.",
-    details: "A city of romance and endless possibilities",
-    tooltip: "Cairo, the city of a thousand minarets and endless dreams. We'll dance to the rhythm of the Nile, feast under pyramid shadows, and write our love story in the stars above the eternal city.",
+      "Exploring bustling streets, sharing street food adventures, and laughing under starlit Egyptian skies.",
+    details: "A city of wonder and endless possibilities",
+    tooltip: "Cairo, the city of a thousand minarets and endless dreams. We'll explore to the rhythm of the Nile, feast under pyramid shadows, and write our friendship story in the stars above the eternal city.",
     gradient: "from-orange-100 to-red-100"
   },
 ]
@@ -45,10 +45,10 @@ export default function DreamsAndPlaces() {
           className="text-center mb-16"
         >
           <h2 id="dreams-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#4a3c3c] mb-4 text-balance">
-            Our Dream Journeys
+            Our Dream Adventures
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-[#8b6b7f] max-w-2xl mx-auto mb-8 px-4">
-            Places where we'll meet, explore, and create forever memories together
+            Places where we'll meet, explore, and create unforgettable memories as friends
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-[#d4739f] to-[#c94f6d] mx-auto" />
         </motion.div>
@@ -130,8 +130,8 @@ export default function DreamsAndPlaces() {
           className="text-center mt-16"
         >
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#8b6b7f] font-serif italic px-4">
-            "We'll meet under the sun of Jerusalem, walk through the old streets of Nablus, and share laughter over
-            street food in Cairo."
+            "We'll meet under the sun of Jerusalem, walk through the old streets of Nablus, and share laughter and
+            adventures in Cairo - creating memories that will last a lifetime."
           </p>
         </motion.div>
       </div>

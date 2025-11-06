@@ -50,7 +50,7 @@ export default function BirthdayMessage() {
             <div className="bg-gradient-to-br from-white via-[#fef5f7] to-white rounded-3xl p-6 sm:p-8 md:p-12 border-2 border-[#f4d4e1] shadow-lg overflow-hidden">
 
             <div className="relative z-10 text-right">
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#4a3c3c] font-serif mb-8 text-balance" lang="ar" role="article" aria-live="polite" aria-label="Birthday message in Arabic">
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#4a3c3c] mb-8 text-balance font-[var(--font-arabic)]" lang="ar" role="article" aria-live="polite" aria-label="Birthday message in Arabic">
                 {displayedText}
               </p>
               <motion.span

@@ -24,11 +24,11 @@ export default function Closing() {
         >
           {/* Background text effect */}
           <div className="absolute inset-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-[#d4739f]/5 blur-sm transform scale-110">
-            No matter where we are, you'll always be my home.
+            No matter where we are, you'll always be my best friend.
           </div>
           
           <h2 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif mb-12 leading-tight text-balance text-[#4a3c3c]">
-            No matter where we are, you'll always be my home.
+            No matter where we are, you'll always be my best friend.
           </h2>
         </motion.div>
 
@@ -40,7 +40,7 @@ export default function Closing() {
           className="mb-16"
         >
           <p className="text-lg sm:text-xl md:text-2xl text-[#8b6b7f] mb-12 leading-relaxed font-light">
-            Love knows no distance, only hearts that beat as one.
+            True friendship knows no distance, only souls that understand each other.
           </p>
           
           {/* Enhanced Arabic text with heart */}
@@ -70,7 +70,7 @@ export default function Closing() {
           viewport={{ once: true }}
         >
           <p className="text-base text-[#a97e96] italic font-light tracking-wide">
-            Forever yours, from every corner of the world
+            Friends forever, from every corner of the world
           </p>
         </motion.div>
 
